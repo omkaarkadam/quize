@@ -16,3 +16,10 @@ body {
     background-color: #007bff;
     border-color: #007bff;
 }
+
+#result-container {
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}

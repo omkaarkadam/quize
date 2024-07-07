@@ -6,14 +6,34 @@
     <title>Online Quiz Application</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom styles for centering the start button */
+        body, html {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa; /* Optional: Set a background color */
+        }
+    </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <div id="quiz-container" class="card">
+    <div class="container">
+        <div id="start-container" class="text-center">
+            <button id="start-btn" class="btn btn-primary btn-lg">Start Quiz</button>
+        </div>
+        <div id="quiz-container" class="card" style="display: none;">
             <div class="card-body">
                 <h2 id="question" class="card-title"></h2>
                 <div id="options" class="list-group"></div>
-                <button id="next-btn" class="btn btn-primary mt-3">Next</button>
+                <div id="timer">Time left: <span id="time-left">30</span> seconds</div>
+            </div>
+        </div>
+        <div id="result-container" class="card" style="display: none;">
+            <div class="card-body">
+                <h2 class="card-title">Quiz Completed!</h2>
+                <p id="score" class="card-text"></p>
+                <button id="restart-btn" class="btn btn-primary">Restart Quiz</button>
             </div>
         </div>
     </div>
